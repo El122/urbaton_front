@@ -9,10 +9,19 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "vue": "^3.3.8"
+    "@mdi/js": "^7.3.67",
+    "@vueuse/core": "^10.6.1",
+    "axios": "^1.6.2",
+    "bootstrap": "^5.2.3",
+    "maska": "^2.1.10",
+    "mdi-vue": "^3.0.13",
+    "pinia": "^2.1.7",
+    "vue": "^3.3.8",
+    "vue-router": "^4.2.5"
   },
   "devDependencies": {
     "@vitejs/plugin-vue": "^4.5.0",
+    "sass": "^1.69.5",
     "vite": "^5.0.0"
   }
 }

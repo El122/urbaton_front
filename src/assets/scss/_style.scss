@@ -1,0 +1,112 @@
+// Custom.scss
+// Option B: Include parts of Bootstrap
+
+// 1. Include functions first (so you can manipulate colors, SVGs, calc, etc)
+@import "../../../node_modules/bootstrap/scss/functions";
+
+// 2. Include any default variable overrides here
+
+// 3. Include remainder of required Bootstrap stylesheets
+@import "../../../node_modules/bootstrap/scss/variables";
+@import "../../../node_modules/bootstrap/scss/variables-dark";
+
+// 4. Include any default map overrides here
+$container-max-widths: (
+    sm: 540px,
+    md: 720px,
+    lg: 960px,
+    xl: 1200px,
+    xxl: 1440px
+);
+
+.btn
+{
+    display: flex;
+    padding: 1.2rem 1.6rem;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    column-gap: 1.2rem;
+    color: #FFFFFF;
+    font-size: 1.8rem;
+    font-weight: 600;
+    border-radius: 10px;
+}
+.btn-primary
+{
+    background: #2085C5;
+    &:disabled
+    {
+        pointer-events: none;
+        opacity: 0.7;
+    }
+    &:focus-visible,
+    &:hover,
+    &:active,
+    :not(.btn-check)+&:active,
+    &:first-child:active,
+    &.active,
+    &.show
+    {
+        color: #2085C5;
+        border: 1px solid #2085C5;
+        background-color: #FFF;
+
+
+    }
+}
+.form-control
+{
+    padding: 1.4rem 1.6rem;
+    border-radius: 10px;
+    border: 1px solid #677480;
+    color: #424242;
+    font-size: 1.6rem;
+    font-weight: 600;
+    background: #FFF;
+    &::placeholder
+    {
+        color: #DCDCDC;
+        font-size: 2rem;
+        font-weight: 600;
+    }
+    &:focus,
+    &:active
+    {
+        border: 1px solid #677480;
+        outline: none;
+        box-shadow: none;
+        color: inherit;
+    }
+}
+// 5. Include remainder of required parts
+@import "../../../node_modules/bootstrap/scss/maps";
+@import "../../../node_modules/bootstrap/scss/mixins";
+@import "../../../node_modules/bootstrap/scss/root";
+
+// 6. Optionally include any other parts as needed
+@import "../../../node_modules/bootstrap/scss/utilities";
+@import "../../../node_modules/bootstrap/scss/reboot";
+@import "../../../node_modules/bootstrap/scss/type";
+@import "../../../node_modules/bootstrap/scss/images";
+@import "../../../node_modules/bootstrap/scss/containers";
+@import "../../../node_modules/bootstrap/scss/grid";
+@import "../../../node_modules/bootstrap/scss/helpers";
+
+// 7. Optionally include utilities API last to generate classes based on the Sass map in `_utilities.scss`
+@import "../../../node_modules/bootstrap/scss/utilities/api";
+
+// 8. Add additional custom code here
+$grid-gutter-width: 3rem;
+$gutters: (
+0: 0,
+1: $spacer * .25,
+2: $spacer * .5,
+3: $spacer,
+4: $spacer * 1.5,
+5: $spacer * 3,
+);
+
+@import './fonts';
+@import './global';
+@import './reset';
